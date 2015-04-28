@@ -13,7 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
 Plug 'freeo/vim-kalisi' " Colorscheme
 Plug 'mattn/emmet-vim' " Zen coding
-Plug 'tpope/vim-commentary.git' " Quick commenting
+Plug 'tpope/vim-commentary' " Quick commenting
 
 Plug 'quasarj/VimSql', { 'branch': 'neovim' }
 
@@ -73,9 +73,8 @@ set smartcase    " smart disable ignore case
 " set scrolloff=3
 
 " link default yank buffer to x11 clipboard
-" This should really be replaced with some custom
-" commands and the x11 workaround below
-set clipboard=unnamedplus
+" replaced with x11 workaround below
+" set clipboard=unnamedplus
 
 set foldmethod=marker
 
@@ -110,11 +109,9 @@ function! ClipboardPaste()
   let @@ = system('xclip -o -selection clipboard')
 endfunction
 
-"vnoremap <silent> y y:call ClipboardYank()<cr>
-"vnoremap <silent> d d:call ClipboardYank()<cr>
-"nnoremap <silent> p :call ClipboardPaste()<cr>p
-"onoremap <silent> y y:call ClipboardYank()<cr>
-"onoremap <silent> d d:call ClipboardYank()<cr>
+vmap <silent> <leader>y y:call ClipboardYank()<cr>
+nmap <silent> <leader>p :call ClipboardPaste()<cr>p
+
 " }}}
 
 syntax on
