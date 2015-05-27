@@ -2,6 +2,7 @@
 
 " vim-plug plugin management
 " https://github.com/junegunn/vim-plug
+" curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.nvim/bundle')
 
 Plug 'kien/ctrlp.vim'
@@ -15,7 +16,7 @@ Plug 'freeo/vim-kalisi' " Colorscheme
 Plug 'mattn/emmet-vim' " Zen coding
 Plug 'tpope/vim-commentary' " Quick commenting
 
-Plug 'quasarj/VimSql', { 'branch': 'neovim' }
+Plug 'quasarj/prophecy'
 
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
